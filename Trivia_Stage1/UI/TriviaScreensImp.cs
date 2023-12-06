@@ -120,10 +120,28 @@ namespace Trivia_Stage1.UI
             return (false);
         }
 
-        public void ShowAddQuestion()
+        public void ShowAddQuestion() //שי
         {
-            Console.WriteLine("Not implemented yet! Press any key to continue...");
-            Console.ReadKey(true);
+            foreach (Player p in Db.Players)
+            {
+                if (p.Points>= 100)
+                {
+                    Console.WriteLine("good job! now you have 100 points and you can add questions");
+                    Console.WriteLine("please enter the subject");
+                    string subject=Console.ReadLine();
+                    Console.WriteLine("please enter your question");
+                    string question=Console.ReadLine();
+                    Console.WriteLine("please enter right answer");
+                    string Ranswer=Console.ReadLine();
+                    Console.WriteLine("please enter wrong answer");
+                    string Wanswer=Console.ReadLine();
+                    Console.WriteLine("please enter another wrong answer");
+                    string Wanswer2 = Console.ReadLine();
+                    Console.WriteLine("please enter another wrong answer");
+                    string Wanswer3 = Console.ReadLine();
+                }
+                else { Console.WriteLine("if you want to add questions, go play and get more points!! X)"); }
+            }
         }
 
         public void ShowPendingQuestions()
